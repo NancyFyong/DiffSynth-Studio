@@ -1,0 +1,304 @@
+{
+  "schema_version": 1,
+  "implementation_commit": "9b75f73d1d3a7e095012568122a086102ab6bfa8",
+  "purpose": "Full-resolution DiffSynth LTX-2.5 inference media for modelscope/DiffSynth-Studio#1602",
+  "notes": [
+    "Every media result is 960x576, 121 frames at 24 FPS, and 5.041667 seconds.",
+    "Every MP4 contains H.264 video and 48 kHz stereo AAC audio.",
+    "This set deliberately excludes 64x64 smoke outputs.",
+    "The P0 Distilled T2AV result uses LTX25_VRAM_LIMIT_GB=16.",
+    "Pixel Spatial Upscaler uses the official LTX-2.5 Pixel IC-LoRA."
+  ],
+  "media": [
+    {
+      "mode": "A2V",
+      "file": "a2v-960x576-121f.mp4",
+      "bytes": 6499965,
+      "sha256": "9ace4ca68b0a3a577da3fc85a419e63ffa3243243d98dcab4d3f2c8128c98614",
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 960,
+            "height": 576,
+            "avg_frame_rate": "24/1"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "avg_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "5.041667"
+        }
+      }
+    },
+    {
+      "mode": "Dev one-stage I2AV",
+      "file": "dev-one-stage-i2av-960x576-121f.mp4",
+      "bytes": 6343874,
+      "sha256": "def05c71130e2dcb3ee587b1e4bc11a59888d9cc03c8872d98b949b28304499d",
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 960,
+            "height": 576,
+            "avg_frame_rate": "24/1"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "avg_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "5.041667"
+        }
+      }
+    },
+    {
+      "mode": "Dev one-stage T2AV",
+      "file": "dev-one-stage-t2av-960x576-121f.mp4",
+      "bytes": 6163068,
+      "sha256": "b1fa3ac4132ec0037764a248666c60b2029ccff29e3ba5e729dbcdfd62e3c3a8",
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 960,
+            "height": 576,
+            "avg_frame_rate": "24/1"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "avg_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "5.041667"
+        }
+      }
+    },
+    {
+      "mode": "Dev two-stage I2AV",
+      "file": "dev-two-stage-i2av-960x576-121f.mp4",
+      "bytes": 5323354,
+      "sha256": "55db89888998fcebed4ee920eccd8016b4efb9aff9bfe79506e9dad373dc23f9",
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 960,
+            "height": 576,
+            "avg_frame_rate": "24/1"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "avg_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "5.041667"
+        }
+      }
+    },
+    {
+      "mode": "Dev two-stage T2AV",
+      "file": "dev-two-stage-t2av-960x576-121f.mp4",
+      "bytes": 5713868,
+      "sha256": "d63c19014d634479053efe15d8e930766c8d0b7e067a7a49523a4d6172c88143",
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 960,
+            "height": 576,
+            "avg_frame_rate": "24/1"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "avg_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "5.041667"
+        }
+      }
+    },
+    {
+      "mode": "Keyframe interpolation",
+      "file": "keyframe-interpolation-960x576-121f.mp4",
+      "bytes": 4710406,
+      "sha256": "b4df1fbb8edf5a9d6ccfb0c5f545cc58eb57aeb000d49ca786445e5a6e288bd6",
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 960,
+            "height": 576,
+            "avg_frame_rate": "24/1"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "avg_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "5.041667"
+        }
+      }
+    },
+    {
+      "mode": "P0 Distilled T2AV",
+      "file": "p0-distilled-t2av-960x576-121f.mp4",
+      "bytes": 6219332,
+      "sha256": "e206e0f7aa392de0307b772ced2c840e4f7d67169d9a14439601b0df27dd9d70",
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 960,
+            "height": 576,
+            "avg_frame_rate": "24/1"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "avg_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "5.041667"
+        }
+      }
+    },
+    {
+      "mode": "P1 Distilled I2AV",
+      "file": "p1-distilled-i2av-960x576-121f.mp4",
+      "bytes": 5307376,
+      "sha256": "15a12faf6ca39ff685f75b0312d93e40813c0e2645e7f3e908e302564f1f2d2b",
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 960,
+            "height": 576,
+            "avg_frame_rate": "24/1"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "avg_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "5.041667"
+        }
+      }
+    },
+    {
+      "mode": "Pixel Spatial Upscaler IC-LoRA",
+      "file": "pixel-ic-lora-spatial-upscaler-960x576-121f.mp4",
+      "bytes": 7021073,
+      "sha256": "59712e182ae51b9d52f01e7f9d3230ad326912aa2d3931d0667467443493a463",
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 960,
+            "height": 576,
+            "avg_frame_rate": "24/1"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "avg_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "5.041667"
+        }
+      }
+    },
+    {
+      "mode": "Retake",
+      "file": "retake-960x576-121f.mp4",
+      "bytes": 5184664,
+      "sha256": "69ef26e3c5e13b2b39edb0175d7baccfb1db2e0d7667c17268bb22fcfe6f89e0",
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 960,
+            "height": 576,
+            "avg_frame_rate": "24/1"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "avg_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "5.041667"
+        }
+      }
+    }
+  ]
+}
