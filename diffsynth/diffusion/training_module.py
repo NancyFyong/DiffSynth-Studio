@@ -220,7 +220,7 @@ class DiffusionTrainingModule(torch.nn.Module):
         self,
         model: torch.nn.Module,
         search_for_linear=False,
-        linear_detector=lambda x: min(x.weight.shape) >= 512,
+        linear_detector=lambda x: min(x.in_features, x.out_features) >= 512,
         block_list_detector=lambda x: isinstance(x, torch.nn.ModuleList) and len(x) > 1,
         name_prefix="",
     ):
@@ -258,8 +258,11 @@ class DiffusionTrainingModule(torch.nn.Module):
             return pipe
         model_config = self.parse_path_or_model_id(path_or_model_id)
         pipe.load_training_template_model(model_config)
-        pipe.units.append(GeneralUnit_TemplateProcessInputs(pipe.template_data_processor))
-        pipe.units.append(GeneralUnit_TemplateForward(use_gradient_checkpointing, use_gradient_checkpointing_offload))
+        template_units = [
+            GeneralUnit_TemplateProcessInputs(pipe.template_data_processor),
+            GeneralUnit_TemplateForward(use_gradient_checkpointing, use_gradient_checkpointing_offload),
+        ]
+        pipe.units = template_units + pipe.units
         return pipe
 
 
