@@ -1,0 +1,7 @@
+training_strategy:
+  video:
+    is_generated: true
+    conditions:
+      - type: first_frame
+  audio:
+    is_generated: true

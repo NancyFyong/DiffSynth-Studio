@@ -1,0 +1,6 @@
+training_strategy:
+  audio:
+    is_generated: true
+    conditions:
+      - type: suffix
+        temporal_boundary: 8
