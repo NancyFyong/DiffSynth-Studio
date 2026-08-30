@@ -1,0 +1,8 @@
+training_strategy:
+  video:
+    is_generated: true
+    conditions:
+      - type: prefix
+        temporal_boundary: 8
+  audio:
+    is_generated: true

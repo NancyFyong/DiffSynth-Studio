@@ -1,0 +1,12 @@
+training_strategy:
+  video:
+    is_generated: true
+    conditions:
+      - type: reference
+        downscale_factor: 1
+        temporal_scale_factor: 1
+  audio:
+    is_generated: true
+    conditions:
+      - type: reference
+        temporal_scale_factor: 1

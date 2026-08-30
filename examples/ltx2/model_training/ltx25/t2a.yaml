@@ -1,0 +1,3 @@
+training_strategy:
+  audio:
+    is_generated: true

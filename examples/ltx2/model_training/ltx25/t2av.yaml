@@ -1,0 +1,5 @@
+training_strategy:
+  video:
+    is_generated: true
+  audio:
+    is_generated: true

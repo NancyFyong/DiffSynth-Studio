@@ -43,8 +43,9 @@ class LTX25AudioVideoPipeline(LTX2AudioVideoPipeline):
         self.duration_head = None
         self.units[2] = LTX25AudioVideoUnit_PromptEmbedder()
 
-    @staticmethod
+    @classmethod
     def from_pretrained(
+        cls,
         torch_dtype: torch.dtype = torch.bfloat16,
         device: Union[str, torch.device] = get_device_type(),
         model_configs: list[ModelConfig] = [],
@@ -56,7 +57,7 @@ class LTX25AudioVideoPipeline(LTX2AudioVideoPipeline):
     ) -> "LTX25AudioVideoPipeline":
         if gemma_path is None:
             raise ValueError("gemma_path is required for the packed LTX-2.5 Gemma4 tokenizer assets.")
-        pipe = LTX25AudioVideoPipeline(device=device, torch_dtype=torch_dtype)
+        pipe = cls(device=device, torch_dtype=torch_dtype)
         model_pool = pipe.download_and_load_models(model_configs, vram_limit)
         pipe.text_encoder = model_pool.fetch_model("ltx25_text_encoder")
         pipe.text_encoder_post_modules = model_pool.fetch_model("ltx25_text_encoder_post_modules")
